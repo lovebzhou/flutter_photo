@@ -29,6 +29,9 @@ class Options {
   /// Disable text color of ok and preview button, textColor(topBarTextColor, bottomBarTextColor) with alpha[disableTextColorAlpha]
   final int disableTextColorAlpha;
 
+  final Color checkBoxSelectedColor;
+  final Color checkBoxUnselectedColor;
+  
   final Color dividerColor;
 
   final int thumbSize;
@@ -55,6 +58,8 @@ class Options {
     this.bottomBarTextColor,
     this.bottomBarBackgroundColor,
     this.disableTextColorAlpha,
+    this.checkBoxSelectedColor,
+    this.checkBoxUnselectedColor,
     this.dividerColor,
     this.thumbSize,
     this.sortDelegate,

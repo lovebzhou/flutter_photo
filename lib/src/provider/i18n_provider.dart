@@ -32,7 +32,7 @@ class CNProvider extends I18nProvider {
 
   @override
   String getTitleText(Options options) {
-    return "图片选择";
+    return (options.pickType == PickType.onlyVideo) ? '选择视频' : '图片选择';
   }
 
   @override

@@ -340,12 +340,12 @@ class _PhotoMainPageState extends State<PhotoMainPage>
           color: options.textColor,
         ),
       );
-      decoration = BoxDecoration(color: themeColor);
+      decoration = BoxDecoration(color: options.checkBoxSelectedColor ?? themeColor, borderRadius: BorderRadius.circular(12));
     } else {
       decoration = BoxDecoration(
-        borderRadius: BorderRadius.circular(1.0),
+        borderRadius: BorderRadius.circular(12.0),
         border: Border.all(
-          color: themeColor,
+          color: options.checkBoxUnselectedColor ?? themeColor,
         ),
       );
     }

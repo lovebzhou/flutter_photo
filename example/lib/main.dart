@@ -119,7 +119,8 @@ class _MyHomePageState extends State<MyHomePage> with LoadingDelegate {
       // the title color and bottom color
       topBarTextColor: Colors.black,
       topBarBackgroundColor: Colors.white,
-
+      checkBoxSelectedColor: Colors.red,
+      checkBoxUnselectedColor: Colors.white,
       textColor: Colors.white,
       // text color
       padding: 1.0,
@@ -145,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> with LoadingDelegate {
       checkBoxBuilderDelegate: DefaultCheckBoxBuilderDelegate(
         activeColor: Colors.white,
         unselectedColor: Colors.white,
-        checkColor: Colors.green,
+        checkColor: Colors.red,
       ),
       // default is DefaultCheckBoxBuilderDelegate ,or you make custom delegate to create checkbox
 

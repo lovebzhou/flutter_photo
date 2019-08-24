@@ -73,6 +73,8 @@ class PhotoPicker {
     Color bottomBarTextColor,
     Color bottomBarBackgroundColor,
     int disableTextColorAlpha,
+    Color checkBoxSelectedColor,
+    Color checkBoxUnselectedColor,
     Color dividerColor,
     int thumbSize = 64,
     I18nProvider provider = I18nProvider.chinese,
@@ -91,7 +93,10 @@ class PhotoPicker {
     dividerColor ??= Theme.of(context)?.dividerColor ?? Colors.grey;
     textColor ??= Colors.white;
     disableTextColorAlpha ??= 100;
-
+    topBarTextColor ??= textColor;
+    bottomBarTextColor ??= textColor;
+    checkBoxSelectedColor ??= themeColor;
+    checkBoxUnselectedColor ??= themeColor;
     sortDelegate ??= SortDelegate.common;
     checkBoxBuilderDelegate ??= DefaultCheckBoxBuilderDelegate();
 
@@ -110,6 +115,8 @@ class PhotoPicker {
       bottomBarTextColor: bottomBarTextColor,
       bottomBarBackgroundColor: bottomBarBackgroundColor,
       disableTextColorAlpha: disableTextColorAlpha,
+      checkBoxSelectedColor: checkBoxSelectedColor,
+      checkBoxUnselectedColor: checkBoxUnselectedColor,
       thumbSize: thumbSize,
       sortDelegate: sortDelegate,
       checkBoxBuilderDelegate: checkBoxBuilderDelegate,
