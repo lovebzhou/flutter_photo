@@ -97,12 +97,13 @@ class _PhotoMainPageState extends State<PhotoMainPage>
 
   @override
   Widget build(BuildContext context) {
+    final textColor = options.topBarTextColor ?? options.textColor;
     var textStyle = TextStyle(
-      color: options.textColor,
+      color: textColor,
       fontSize: 14.0,
     );
     final topBackgroundColor = options.topBarBackgroundColor ?? options.themeColor;
-    final topTextColor = options.topBarTextColor ?? options.textColor;
+    
 
     return Theme(
       data: Theme.of(context).copyWith(primaryColor: options.themeColor),
@@ -114,14 +115,14 @@ class _PhotoMainPageState extends State<PhotoMainPage>
             leading: IconButton(
               icon: Icon(
                 Icons.close,
-                color: options.textColor,
+                color: textColor,
               ),
               onPressed: _cancel,
             ),
             title: Text(
               i18nProvider.getTitleText(options),
               style: TextStyle(
-                color: topTextColor,
+                color: textColor,
               ),
             ),
             actions: <Widget>[
@@ -130,7 +131,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
                 child: Text(
                   i18nProvider.getSureText(options, selectedCount),
                   style: selectedCount == 0
-                      ? textStyle.copyWith(color: topTextColor.withAlpha(100))
+                      ? textStyle.copyWith(color: textColor.withAlpha(100))
                       : textStyle,
                 ),
                 onPressed: selectedCount == 0 ? null : sure,
