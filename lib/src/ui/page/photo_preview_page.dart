@@ -97,11 +97,11 @@ class _PhotoPreviewPageState extends State<PhotoPreviewPage> {
   @override
   Widget build(BuildContext context) {
     var data = Theme.of(context);
+    final textColor = options.topBarTextColor ?? options.textColor;
     var textStyle = TextStyle(
-      color: options.textColor,
+      color: textColor,
       fontSize: 14.0,
     );
-    final textColor = options.topBarTextColor ?? options.textColor;
     return Theme(
       data: data.copyWith(
         primaryColor: options.themeColor,

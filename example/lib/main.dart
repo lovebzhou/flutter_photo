@@ -115,8 +115,10 @@ class _MyHomePageState extends State<MyHomePage> with LoadingDelegate {
       context: context,
 
       /// The following are optional parameters.
-      themeColor: Colors.green,
+      themeColor: Colors.black,
       // the title color and bottom color
+      topBarTextColor: Colors.black,
+      topBarBackgroundColor: Colors.white,
 
       textColor: Colors.white,
       // text color
