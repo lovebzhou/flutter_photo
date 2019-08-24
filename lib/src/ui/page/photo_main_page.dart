@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
 import 'package:photo/src/delegate/badge_delegate.dart';
 import 'package:photo/src/delegate/loading_delegate.dart';
 import 'package:photo/src/engine/lru_cache.dart';
@@ -315,8 +316,8 @@ class _PhotoMainPageState extends State<PhotoMainPage>
     var currentSelected = containsEntity(entity);
     return Positioned(
       right: 0.0,
-      width: 36.0,
-      height: 36.0,
+      width: 48.0,
+      height: 48.0,
       child: GestureDetector(
         onTap: () {
           changeCheck(!currentSelected, entity);
@@ -336,21 +337,22 @@ class _PhotoMainPageState extends State<PhotoMainPage>
         (indexOfSelected(entity) + 1).toString(),
         textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize: 12.0,
+          fontSize: 16.0,
           color: options.textColor,
         ),
       );
-      decoration = BoxDecoration(color: options.checkBoxSelectedColor ?? themeColor, borderRadius: BorderRadius.circular(12));
+      decoration = BoxDecoration(color: options.checkBoxSelectedColor ?? themeColor, borderRadius: BorderRadius.circular(13));
     } else {
       decoration = BoxDecoration(
-        borderRadius: BorderRadius.circular(12.0),
+        color: Colors.black12,
+        borderRadius: BorderRadius.circular(13.0),
         border: Border.all(
           color: options.checkBoxUnselectedColor ?? themeColor,
         ),
       );
     }
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(11.0),
       child: AnimatedContainer(
         duration: Duration(milliseconds: 300),
         decoration: decoration,
