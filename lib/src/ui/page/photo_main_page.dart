@@ -107,6 +107,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
         style: textStyle,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: options.themeColor,
             leading: IconButton(
               icon: Icon(
                 Icons.close,
