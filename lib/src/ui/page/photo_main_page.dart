@@ -101,13 +101,16 @@ class _PhotoMainPageState extends State<PhotoMainPage>
       color: options.textColor,
       fontSize: 14.0,
     );
+    final topBackgroundColor = options.topBarBackgroundColor ?? options.themeColor;
+    final topTextColor = options.topBarTextColor ?? options.textColor;
+
     return Theme(
       data: Theme.of(context).copyWith(primaryColor: options.themeColor),
       child: DefaultTextStyle(
         style: textStyle,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: options.themeColor,
+            backgroundColor: topBackgroundColor,
             leading: IconButton(
               icon: Icon(
                 Icons.close,
@@ -118,7 +121,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
             title: Text(
               i18nProvider.getTitleText(options),
               style: TextStyle(
-                color: options.textColor,
+                color: topTextColor,
               ),
             ),
             actions: <Widget>[
@@ -127,7 +130,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
                 child: Text(
                   i18nProvider.getSureText(options, selectedCount),
                   style: selectedCount == 0
-                      ? textStyle.copyWith(color: options.disableColor)
+                      ? textStyle.copyWith(color: topTextColor.withAlpha(100))
                       : textStyle,
                 ),
                 onPressed: selectedCount == 0 ? null : sure,

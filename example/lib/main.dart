@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> with LoadingDelegate {
       // item padding
       dividerColor: Colors.grey,
       // divider color
-      disableColor: Colors.grey.shade300,
+      // disableColor: Colors.grey.shade300,
       // the check box disable color
       itemRadio: 0.88,
       // the content item radio

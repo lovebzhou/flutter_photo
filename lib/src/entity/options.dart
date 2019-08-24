@@ -13,13 +13,23 @@ class Options {
 
   final double itemRadio;
 
+  /// default text color of top and bottom bar
+  final Color textColor;
+  /// default background color of top and bottom bar.
   final Color themeColor;
 
+  /// If this property is null, then textColor is used
+  final Color topBarTextColor;
+  /// If this property is null, then themeColor is used
+  final Color topBarBackgroundColor;
+  /// If this property is null, then textColor is used
+  final Color bottomBarTextColor;
+  /// If this property is null, then themeColor is used
+  final Color bottomBarBackgroundColor;
+  /// Disable text color of ok and preview button, textColor(topBarTextColor, bottomBarTextColor) with alpha[disableTextColorAlpha]
+  final int disableTextColorAlpha;
+
   final Color dividerColor;
-
-  final Color textColor;
-
-  final Color disableColor;
 
   final int thumbSize;
 
@@ -38,10 +48,14 @@ class Options {
     this.maxSelected,
     this.padding,
     this.itemRadio,
-    this.themeColor,
-    this.dividerColor,
     this.textColor,
-    this.disableColor,
+    this.themeColor,
+    this.topBarTextColor,
+    this.topBarBackgroundColor,
+    this.bottomBarTextColor,
+    this.bottomBarBackgroundColor,
+    this.disableTextColorAlpha,
+    this.dividerColor,
     this.thumbSize,
     this.sortDelegate,
     this.checkBoxBuilderDelegate,

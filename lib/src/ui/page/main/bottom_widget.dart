@@ -38,8 +38,9 @@ class __BottomWidgetState extends State<_BottomWidget> {
   Widget build(BuildContext context) {
     var textStyle = TextStyle(fontSize: 14.0);
     const textPadding = const EdgeInsets.symmetric(horizontal: 16.0);
+    final textColor = options.bottomBarTextColor ?? options.textColor;
     return Container(
-      color: options.themeColor,
+      color: options.bottomBarBackgroundColor ?? options.themeColor,
       child: SafeArea(
         bottom: true,
         top: false,
@@ -56,7 +57,7 @@ class __BottomWidgetState extends State<_BottomWidget> {
                   padding: textPadding,
                   child: Text(
                     widget.galleryName,
-                    style: textStyle.copyWith(color: options.textColor),
+                    style: textStyle.copyWith(color: textColor),
                   ),
                 ),
               ),
@@ -67,7 +68,7 @@ class __BottomWidgetState extends State<_BottomWidget> {
                 onPressed: widget.onTapPreview,
                 textColor: options.textColor,
                 splashColor: Colors.transparent,
-                disabledTextColor: options.disableColor,
+                disabledTextColor: textColor.withAlpha(options.disableTextColorAlpha),
                 child: Container(
                   height: 44.0,
                   alignment: Alignment.center,

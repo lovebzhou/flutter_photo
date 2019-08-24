@@ -67,9 +67,13 @@ class PhotoPicker {
     double padding = 0.5,
     double itemRadio = 1.0,
     Color themeColor,
-    Color dividerColor,
     Color textColor,
-    Color disableColor,
+    Color topBarTextColor,
+    Color topBarBackgroundColor,
+    Color bottomBarTextColor,
+    Color bottomBarBackgroundColor,
+    int disableTextColorAlpha,
+    Color dividerColor,
     int thumbSize = 64,
     I18nProvider provider = I18nProvider.chinese,
     SortDelegate sortDelegate,
@@ -85,8 +89,8 @@ class PhotoPicker {
 
     themeColor ??= Theme.of(context)?.primaryColor ?? Colors.black;
     dividerColor ??= Theme.of(context)?.dividerColor ?? Colors.grey;
-    disableColor ??= Theme.of(context)?.disabledColor ?? Colors.grey;
     textColor ??= Colors.white;
+    disableTextColorAlpha ??= 100;
 
     sortDelegate ??= SortDelegate.common;
     checkBoxBuilderDelegate ??= DefaultCheckBoxBuilderDelegate();
@@ -99,9 +103,13 @@ class PhotoPicker {
       maxSelected: maxSelected,
       itemRadio: itemRadio,
       padding: padding,
-      disableColor: disableColor,
       textColor: textColor,
       themeColor: themeColor,
+      topBarTextColor: topBarTextColor,
+      topBarBackgroundColor: topBarBackgroundColor,
+      bottomBarTextColor: bottomBarTextColor,
+      bottomBarBackgroundColor: bottomBarBackgroundColor,
+      disableTextColorAlpha: disableTextColorAlpha,
       thumbSize: thumbSize,
       sortDelegate: sortDelegate,
       checkBoxBuilderDelegate: checkBoxBuilderDelegate,
