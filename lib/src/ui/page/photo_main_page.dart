@@ -337,22 +337,22 @@ class _PhotoMainPageState extends State<PhotoMainPage>
         (indexOfSelected(entity) + 1).toString(),
         textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize: 16.0,
+          fontSize: 14.0,
           color: options.textColor,
         ),
       );
-      decoration = BoxDecoration(color: options.checkBoxSelectedColor ?? themeColor, borderRadius: BorderRadius.circular(13));
+      decoration = BoxDecoration(color: options.checkBoxSelectedColor ?? themeColor, borderRadius: BorderRadius.circular(12));
     } else {
       decoration = BoxDecoration(
         color: Colors.black12,
-        borderRadius: BorderRadius.circular(13.0),
+        borderRadius: BorderRadius.circular(12.0),
         border: Border.all(
           color: options.checkBoxUnselectedColor ?? themeColor,
         ),
       );
     }
     return Padding(
-      padding: const EdgeInsets.all(11.0),
+      padding: const EdgeInsets.all(12.0),
       child: AnimatedContainer(
         duration: Duration(milliseconds: 300),
         decoration: decoration,
