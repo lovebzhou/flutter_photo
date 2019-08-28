@@ -57,7 +57,7 @@ class CNProvider extends I18nProvider {
 
   @override
   String getAllGalleryText(Options options) {
-    return "全部图片";
+    return "全部相册";
   }
 
   @override
